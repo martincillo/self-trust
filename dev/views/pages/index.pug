@@ -1,0 +1,20 @@
+extends ../includes/template
+
+block content
+  section.multimedia
+    video(src='video/AdobeXD-demo.mp4' controls).video
+  section.products
+    .l-main-container
+      h2 Nuestros productos
+      .product-container
+        +product('polvo_arroz', 'Polvo de arroz', 'Polvo de arroz')
+        +product('hidrolato_rosas', 'Hidrolato de rosas', 'Hidrolato de rosas')
+        +product('agua_arroz', 'Agua de arroz', 'Agua de arroz')
+  section.colaborators
+    .l-main-container
+      h2 Colaboradores
+        .colaborator-container
+          +colaborator('asa', 'Flor Salayandía')
+          +colaborator('asa', 'Flor Salayandía')
+          +colaborator('asa', 'Flor Salayandía')
+          +colaborator('asa', 'Flor Salayandía')

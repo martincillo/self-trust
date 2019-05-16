@@ -1,0 +1,15 @@
+mixin product(img, desc, productName)
+  a(href="#"): figure.product
+    .product__img: img(src=`img/products/${img}.png` alt= desc)
+    figcaption.product__name: h3.product-title= productName 
+    p.product__info Ver más
+
+mixin colaborator(img, name)
+  figure.colaborator
+    .colaborator__img: img(src=`img/colaborators/${img}` alt='Avatar')
+    figcaption.colaborator__data: p.colaborator__name= name
+
+mixin contact(nameDiv, url, info)
+  li(class = `main-footer__${nameDiv}`)
+    i(class= `${url}`)
+    span= info

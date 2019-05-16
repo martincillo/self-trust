@@ -1,0 +1,31 @@
+block config
+  include config
+include ../mixins/mixin
+
+doctype
+html(lang=en)
+  head
+    //- ${pages[0].normalize('NFD').replace(/[\u0300-\u036f]/g,"")}
+    title= `${currentPage} | ${siteName}`
+    meta(charset='UTF-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1')
+    meta(name='description' content='')
+    link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous")
+    link(rel='stylesheet' href='css/styles.css')
+  body
+    h1 Self trust
+    header.main-header: .l-main-container
+      .main-header__logo: img(src='' alt='Logo')
+      .main-header__hamburger-icon
+      nav: ul.main-menu
+        each page in pages
+          li.main-menu__item: a.main-menu__link(href= `${page.normalize('NFD').replace(/[\u0300-\u036f]/g,"").toLowerCase().split(" ").join("-")}.html`)= page
+    main.main
+      block content
+      
+    footer.main-footer: .l-main-container
+      h2.main-footer__title Contacto
+      ul.main-footer__info
+        +contact('address', 'fas fa-map-marker-alt', 'Av. Solidaridad 3, Pri, 33825 Hidalgo del Parral, Chih.')
+        +contact('phone', 'fab fa-whatsapp', '01 627 522 6081')
+        +contact('email', 'far fa-envelope', 'micorreo@mail.com')
