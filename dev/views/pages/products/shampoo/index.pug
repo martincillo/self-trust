@@ -1,0 +1,24 @@
+extends ../../../includes/template
+
+block append config
+  -
+    let ingredients = [
+      '1 L de agua mineral',
+      '6 cucharadas de hierbas secas',
+      '15 cucharas de jabón neutro rallado (el de su preferencia)',
+      '60 gotas máximo de aceite esencial'
+    ]
+
+    currentPage = 'Shampoo'
+
+block content
+  .l-main-container
+    +productInfo('Shampoo')
+
+  script.
+    let productDescc = `Se pone a hervir el agua, cuando esto pase se retira de la fuente de calor.
+    <br/><br/>Después de retirar del fuego el agua se le agregan las dos cucharadas de hierbas secas y se tapa durante 20 minutos.
+    <br/><br/>Se cuela y se agrega el jabón rallado, se espera a que se derrita, después de esto se guarda en una botella opaca para que no le dé el sol. El shampoo dura hasta un mes.
+    `
+
+    document.getElementById('productDesc').innerHTML = productDescc

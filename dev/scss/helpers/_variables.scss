@@ -1,3 +1,31 @@
 :root {
-  
+  --primary-color: #17A0B3;
+  --secondary-color: #9E9D9D;
+  --third-color: #F8EFEF;
+
+  --font-family: 'Segoe UI', sans-serif;
+
+  --h2: 30px;
+  --h3: 22px;
+  --text: 17px;
+
+  --max-width: 1200px;
+
+  --header-height: 3rem;
+  --container-height: 300px;
+  @media screen and (min-width: 768px) {
+    --header-height: 4rem;
+    --container-height: 500px;
+  }
+
+  --z-back: -10;
+  --z-normal: 1;
+  --z-tooltip: 10;
+  --z-fixed: 100;
+  --z-modal: 1000;
 }
+
+$breakpoints: (
+    medium: 768px,
+    large: 1200px,
+  );

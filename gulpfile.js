@@ -9,7 +9,7 @@ const gulp = require('gulp'),
 
 gulp.task('serve', () => {
   bsync.init({
-    server: './dist'
+    server: './public'
   })
 
   gulp.watch('./dev/scss/**/*.scss', gulp.series('sass'))
@@ -17,22 +17,22 @@ gulp.task('serve', () => {
 })
 
 gulp.task('sass', () => 
-  gulp.src('./dev/scss/**/*.scss')
+  gulp.src('./dev/scss/styles.scss')
     .pipe(sass().on('error',sass.logError))
     .pipe(autoprefixer({
       browsers: ['last 2 versions']
     }))
-    .pipe(gulp.dest('./dist/css'))
+    .pipe(gulp.dest('./public/assets/css'))
     .pipe(bsync.stream())
 )
 
 /* Definir tarea */
 gulp.task('pug', () => 
-    gulp.src('./dev/views/pages/*.pug')
+    gulp.src('./dev/views/pages/**/*.pug')
       .pipe(pug({
         pretty: true
       }))
-      .pipe(gulp.dest('./dist/'))
+      .pipe(gulp.dest('./public/'))
       .pipe(bsync.stream())
 )
 

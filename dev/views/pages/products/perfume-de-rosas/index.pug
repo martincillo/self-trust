@@ -1,0 +1,24 @@
+extends ../../../includes/template
+
+block append config
+  -
+    let ingredients = [
+      'Los pétalos de 3 rosas',
+      '1 cucharada de romero y otra de menta.',
+      'Ralladura de un limón.',
+      '4 cucharadas de aceite de almendras o aguacate.',
+      '1 taza de alcohol (alcohol de tapa azul) y otra de agua.'
+    ]
+
+    currentPage = 'Perfume de rosas'
+
+block content
+  .l-main-container
+    +productInfo('Perfume de rosas')
+
+  script.
+    let productDescc = `Se trituran las flores y las hierbas antes de mezclar todos los productos que necesitan, se mezcla y se mezcla y se dejan reposar durante 15 días.
+    <br/><br/>Al terminar este periodo, hay que colar la mezcla antes de disfrutarla.
+    `
+
+    document.getElementById('productDesc').innerHTML = productDescc

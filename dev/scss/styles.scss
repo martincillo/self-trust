@@ -1,1 +1,21 @@
-$color: yellow;
+@import './helpers/variables';
+@import './helpers/functions';
+@import './helpers/mixins';
+@import './helpers/utilities';
+
+@import './base/base';
+
+@import './layout/layout';
+
+@import './components/header';
+@import './components/video';
+@import './components/product-cards';
+@import './components/colaborator';
+@import './components/footer';
+
+@import './pages/home';
+@import './pages/mision-vision';
+@import './pages/objetivo-valores';
+@import './pages/products';
+
+@import './state/state';

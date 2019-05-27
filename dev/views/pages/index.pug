@@ -2,19 +2,24 @@ extends ../includes/template
 
 block content
   section.multimedia
-    video(src='video/AdobeXD-demo.mp4' controls).video
-  section.products
     .l-main-container
+      video(src='video/AdobeXD-demo.mp4' controls).video
+  section.products
+    .l-main-container.products-container
       h2 Nuestros productos
-      .product-container
-        +product('polvo_arroz', 'Polvo de arroz', 'Polvo de arroz')
-        +product('hidrolato_rosas', 'Hidrolato de rosas', 'Hidrolato de rosas')
-        +product('agua_arroz', 'Agua de arroz', 'Agua de arroz')
+      .products
+        +product('polvo-de-arroz', 'Polvo de arroz', 'Polvo de arroz')
+        +product('hidrolato-de-rosas', 'Hidrolato de rosas', 'Hidrolato de rosas')
+        +product('agua-de-arroz', 'Agua de arroz', 'Agua de arroz')
+        +product('shampoo', 'Shampoo', 'Shampoo')
+        +product('jabon', 'Jabón', 'Jabón')
+        +product('perfume-de-rosas', 'Perfume de rosas', 'Perfume de rosas')
+        +product('crema-corporal', 'Crema', 'Crema corporal')
   section.colaborators
     .l-main-container
       h2 Colaboradores
-        .colaborator-container
-          +colaborator('asa', 'Flor Salayandía')
-          +colaborator('asa', 'Flor Salayandía')
-          +colaborator('asa', 'Flor Salayandía')
-          +colaborator('asa', 'Flor Salayandía')
+      .colaborator-container
+        +colaborator('flor', 'Flor Salayandía')
+        +colaborator('edgar', 'Edgar Polanco')
+        +colaborator('fernando', 'Fernando Sánchez')
+        +colaborator('bryan', 'Bryan Lerma')

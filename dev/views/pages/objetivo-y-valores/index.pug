@@ -1,0 +1,19 @@
+extends ../../includes/template
+
+block append config
+  -
+    currentPage = pages[1]
+    description = 'Crear productos de calidad libres de crueldad animal.'
+    let valoresArray = ['Responsabilidad', 'Respeto', 'Compromiso', 'Dedicación']
+
+block content
+  +infoCompany('Objetivo')
+  section.valores: .l-main-container
+    .valores__container
+      h2.valores__title Valores
+      .valores__img: img(src="/assets/img/about/valores.png")
+      ul.valores-list
+        each valor in valoresArray
+          li.valores-list__item
+            i.valores-list__icon.fas.fa-check
+            span #{valor}

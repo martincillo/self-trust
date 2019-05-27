@@ -1,0 +1,31 @@
+.valores {
+  margin-bottom: 4rem;
+  &__container {
+
+  }
+
+  &__title {
+    margin-top: 0;
+    
+    @include mq(medium) {
+      margin-top: 3rem;
+      text-align: left;
+    }
+  }
+
+  &-list {
+    margin-left: 1rem;
+  }
+  
+  &-list__icon {
+    color: var(--primary-color);
+    margin-right: 1rem;
+    font-size: 1.5rem;
+  }
+  
+  &-list__item {
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 1rem;
+  }
+}

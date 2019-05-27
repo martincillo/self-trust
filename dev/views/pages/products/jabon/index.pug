@@ -1,0 +1,30 @@
+extends ../../../includes/template
+
+block append config
+  -
+    let ingredients = [
+      '1 barra de glicerina',
+      'Gotas al gusto de la escencia de su elección',
+      'Gotas de colorante vegetal de su elección, de preferencia colores pasteles',
+      'Aceite de almendras o coco opcional',
+      'Moldes de silicón',
+      'Una olla grande',
+      'Olla pequeña que quepa dentro de la olla grande para año maría',
+      'Rallador de queso',
+      'Cuchara de madera de preferencia',
+      'Alcohol de tapa azul',
+      'Se le pueden agregar rajitas de canela, romero, menta, etc para decorar'
+    ]
+
+    currentPage = 'Jabón'
+
+block content
+  .l-main-container
+    +productInfo('Jabón')
+
+  script.
+    let productDescc = `Se ralla la barra de glicerina en la olla pequeña y se pone la olla pequeña dentro de la grande para poder calentar a baño maría, Una vez que este casi derretida la glicerina se le agregan las gotas tanto de aceite como de esencia. Se retira del fuego y ahora si se termina de mezclar hasta que todo quede fundido e incorporado.
+    <br/><br/>Posteriormente se agrega el colorante y se vacía en los moldes los cuales se deben rociar previamente con alcohol para facilitar su desmoldado.
+    <br/><br/>Se dejan enfriar y se refrigeran 30 minutos para su posterior desmoldado.`
+
+    document.getElementById('productDesc').innerHTML = productDescc

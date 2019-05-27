@@ -1,0 +1,19 @@
+extends ../../../includes/template
+
+block append config
+  -
+    let ingredients = [
+      '1 taza de arroz',
+    ]
+
+    currentPage = 'Polvo de arroz'
+
+
+block content
+  .l-main-container
+    +productInfo('Polvo de arroz')
+
+  script.
+    let productDescc = `El polvo de arroz te ayudará a calmar irritaciones, combate el acné, dará una apariencia mate a tu piel, la exfoliará, calma rozaduras y erupciones, es rico en Vitamina B y tiene 10% de ácido fítico, que permite a las células muertas desprenderse y previene que se active la enzima que forma la melanina.`
+
+    document.getElementById('productDesc').innerHTML = productDescc

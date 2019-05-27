@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hidrolato de rosas | Self-Trust</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Encuentra los mejores productos que haran resaltar tu belleza. Confiar en nosotros es confiar en ti.">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+  </head>
+  <body>
+    <header class="header">
+      <div class="l-main-container main-header">
+        <div class="main-header__logo"><a href="/"><img src="/assets/img/logo.png" alt="Logo"></a></div>
+        <nav>
+          <ul class="main-menu" id="mainMenu">
+            <li class="main-menu__item"><a class="main-menu__link" href="/mision-y-vision">Misión y Visión</a></li>
+            <li class="main-menu__item"><a class="main-menu__link" href="/objetivo-y-valores">Objetivo y Valores</a></li>
+          </ul>
+        </nav><i class="fas fa-bars main-header__hamburger-icon" id="hamburgerButton"></i>
+      </div>
+    </header>
+    <main class="main">
+      <div class="l-main-container">
+        <article class="product-article">
+          <section class="product-info">
+            <div class="product-info__img"><img src="/assets/img/products/hidrolato-de-rosas.png" alt="Hidrolato de rosas"/></div>
+            <h2 class="product-info__title">Hidrolato de rosas</h2>
+            <p class="product-info__desc" id="productDesc"></p>
+            <h3 class="product-info__subtitle">Ingredientes</h3>
+            <ul class="product-ingredients">
+              <li class="product-ingredients__item">Agua purificada</li>
+              <li class="product-ingredients__item">5 rosas</li>
+              <li class="product-ingredients__item">Hielo</li>
+            </ul>
+          </section>
+        </article>
+      </div>
+      <script>
+        let productDescc = `Un hidrolato es el agua floral que resulta del proceso de destilación por vapor del aceite        esencial de la planta. Por tanto, las aguas florales o hidrolatos son puros, sin añadidos. En las etiquetas de los hidrolatos, si se encuentra escrito “agua más otros ingredientes”, no es un hidrolato ya que la etiqueta de un hidrolato pondrá que es un hidrolato, sin más. Tiene infinidad de usos, pero en cosmética es utilizado como tónico facial especialmente indicado para pieles envejecidas gracias a sus propiedades regeneradoras, pieles grasas por sus propiedades astringentes y/o pieles sensibles por sus propiedades antiinflamatorias. Como bruma facial, tras un baño de sol, para refrescar y tonificar la piel en cualquier momento. Incluso tras hacer deporte. 
+        <br/><br/>También se usa para fijar o refrescar una base de maquillaje, una vez finalizado el maquillaje, pulveriza sobre la piel ligeramente, eso sí evita los ojos para no estropear el maquillaje de esa zona con el pestañeo. Otro de sus usos sería utilizarlo como perfume o fragancia absolutamente natural en cualquier momento ya que al aplicarlo perfuma la piel y la ropa. En el hogar se puede utilizar para aromatizar las habitaciones o como bruma de almohada. Se trata de un producto versátil al que se le pueden dar una multitud de usos. El hidrolato de rosas también es perfecto para usarse como base a la hora de hacer agua de colonia y también para utilizar en los humificadores.
+        `
+        
+        document.getElementById('productDesc').innerHTML = productDescc
+      </script>
+    </main>
+    <script src="/assets/js/script.js"></script>
+    <footer class="main-footer">
+      <div class="l-main-container main-footer__data">
+        <div class="main-footer__contact">
+          <h2 class="main-footer__title">Contacto</h2>
+          <ul class="main-footer__info">
+            <li class="main-footer__address"><i class="fas fa-map-marker-alt"></i><span>Av. Solidaridad 3, Pri, 33825 Hidalgo del Parral, Chih.</span></li>
+            <li class="main-footer__phone"><i class="fas fa-phone"></i><span>01 627 522 6081</span></li>
+          </ul>
+        </div>
+        <div class="main-footer__logo"><img src="/assets/img/logo.png" alt="Logo"></div>
+      </div>
+    </footer>
+  </body>
+</html>

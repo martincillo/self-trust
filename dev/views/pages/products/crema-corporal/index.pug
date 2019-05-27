@@ -1,0 +1,26 @@
+extends ../../../includes/template
+
+block append config
+  -
+    let ingredients = [
+      '125 ml aproximadamente de agua mineral o de manantial',
+      '42 ml de aceite de coco',
+      '80 ml de aceite de almendras',
+      '14-15 gr de cera de abeja o cera blanca',
+      'Vitamina E',
+      'Colorante vegetal (colores en gel grado alimenticio en tono pastel)'
+    ]
+
+    currentPage = 'Crema Corporal'
+
+block content
+  .l-main-container
+    +productInfo('Crema Corporal')
+
+  script.
+    let productDescc = `<strong>Cera de abeja. –</strong> Es uno de los ingredientes de la crema que sirve para reducir    las cicatrices y    que     además actúa como agente hidratante.
+      <br/><br/><strong>Vitamina E. –</strong>  Es un antioxidante que protege el tejido corporal del daño causado por sustancias llamadas radicales libres, que pueden dañar células, tejidos y órganos.
+      <br/><br/><strong>Aceite de almendras. –</strong>  Ayuda a mantener los niveles de hidratación de la piel y se absorbe en un momento, sin bloquear los poros.
+      <br/><br/><strong>Aceite de coco. –</strong>  Por sus propiedades antibióticas es un buen remedio para prevenir el acné y otros problemas en la piel.`
+
+    document.getElementById('productDesc').innerHTML = productDescc

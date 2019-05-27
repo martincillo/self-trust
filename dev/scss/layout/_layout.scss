@@ -1,0 +1,156 @@
+$margin-b: 4rem;
+$margin-t: 2rem;
+
+.l-main-container {
+  max-width: var(--max-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 1rem;
+  padding-left: 1rem;
+
+}
+
+.products-container {
+  @include mq(medium) {
+    --max-width: 100%;
+    padding-left: 0;
+    padding-right: 0; 
+  }
+}
+
+/* páginas misión, visión y objetivos */
+.l-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: left;
+
+  @include mq(medium) {
+      display: grid;
+      grid-template-areas: "img img . title"
+                           "img img paragraph paragraph";
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(2, auto);
+  }
+
+  &.vision__container {
+
+    @include mq(medium) {
+      grid-template-areas: "title . img img"
+                           "paragraph paragraph img img";
+    }
+    
+    h2 {
+      text-align: right;
+    }
+
+    div {
+      @include mq(medium) {
+        justify-self: flex-end;
+      }
+    }
+  }
+
+  h2 {
+    width: 30%;
+
+    @include mq(medium) {
+      grid-area: title;
+      justify-self: center;
+    }
+  }
+
+  div {
+    width: 70%;
+    height: 150px;
+
+    @include mq(medium) {
+      grid-area: img;
+      height: 200px;
+    }
+  }
+
+  img {
+    height: 100%;
+    object-fit: contain;
+  }
+
+  p {
+    width: 100%;
+    margin-top: $margin-t;
+    margin-bottom: $margin-b;
+
+    @include mq(medium) {
+      grid-area: paragraph;
+    }
+  }
+}
+
+/* páginas objetivo y valores */
+
+.objetivo {
+  
+  &__container {
+    div {
+    
+    }
+  }
+
+  &__title {
+
+  }
+
+  &__desc {
+    font-weight: 500;
+
+    @include mq(medium) {
+      justify-self: end;
+      text-align: right;
+    }
+  }
+
+  &__img { width: 40% !important; }
+
+}
+
+.valores {
+
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+
+    @include mq(medium) { flex-direction: row-reverse; }
+  }
+
+  &__title {
+    flex: 100%;
+
+    @include mq(medium) { margin-left: 3rem ; }
+  }
+
+  &__img {
+    width: 50%;
+    height: 200px;
+    
+    img {
+      @include mq(medium) {
+        // object-fit: fill;
+      }
+      object-fit: contain;
+      height: 100%;
+    }
+  }
+
+  &-list { width: 40%; }
+  
+  &-list__icon {
+    
+  }
+  
+  &-list__item {
+    display: flex;
+  }
+}

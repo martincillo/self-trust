@@ -1,0 +1,124 @@
+.product {
+  background-color: var(--primary-color);
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+
+  &::after {
+    @include mq(medium) {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: rgba(#000, .5);
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition: opacity .5s;
+    }
+  }
+
+  &:hover::after {
+    @include mq(medium) {
+      opacity: 1;
+    }
+  }
+
+  &:hover img{
+    @include mq(medium) {
+      transform: scale(1.2)
+    }
+  }
+
+  &-container {
+    height: 250px;
+    margin-bottom: 40px;
+    overflow: hidden;
+
+    @include mq(medium) {
+      flex: 1 1 0;
+      height: 400px;
+      margin-bottom: 0;
+    }
+
+    * {
+      @include mq(medium) {
+        height: 100%;
+      }
+    }
+  }
+
+  &__link {}
+
+  &__img {
+    width: 75%;
+    @include mq(medium) {
+      width: 100%;
+    }
+
+    img {
+      height: 250px;
+      // object-fit: cover;
+      transition: transform .5s;
+      // filter: grayscale(30%);
+
+      @include mq(medium) {
+        min-height: 100%;
+        // object-fit: scale-down;
+      }     
+    }
+  }
+
+  &__name {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .7);
+    width: 75%;
+    height: 20%;
+    text-align: left;
+
+    @include mq(medium) {
+      width: 100%;
+      height: 20%;
+    }
+
+    @include mq(1310px) {
+      width: 100%;
+      height: 12%;
+    }
+
+    h3 {
+      margin: 0;
+      font-weight: 400;
+      margin-left: .5rem;
+    }
+  }
+  
+  &__info {
+    width: 25%;
+    position: relative;
+    @include mq(medium) {
+      display: none;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 35%;
+      height: 2px;
+      background-color: var(--third-color);
+      bottom: -5px;
+      left: 50%;
+      transform: translateX(-50%)
+    }
+  }
+
+  &s {
+    @include mq(medium) {
+      display: flex;
+      margin-bottom: 2rem;
+    }
+  }
+}

@@ -1,15 +1,34 @@
 mixin product(img, desc, productName)
-  a(href="#"): figure.product
-    .product__img: img(src=`img/products/${img}.png` alt= desc)
-    figcaption.product__name: h3.product-title= productName 
-    p.product__info Ver más
+  .product-container
+    a(href=`/products/${img}/` class="product__link"): figure.product
+      .product__img: img(src=`/assets/img/products/${img}.png` alt= desc)
+      figcaption.product__name: h3.product-title= productName 
+      p.product__info Ver más
 
-mixin colaborator(img, name)
+mixin colaborator(url, name)
   figure.colaborator
-    .colaborator__img: img(src=`img/colaborators/${img}` alt='Avatar')
+    .colaborator__img: img(src=`/assets/img/colaborators/${url}.png` alt='Avatar')
     figcaption.colaborator__data: p.colaborator__name= name
 
 mixin contact(nameDiv, url, info)
   li(class = `main-footer__${nameDiv}`)
     i(class= `${url}`)
     span= info
+
+mixin infoCompany(txt, url='png')
+  section(class=`${txt.normalize('NFD').replace(/[\u0300-\u036f]/g,"").toLowerCase().split(" ").join("-")}`)
+    .l-main-container: div(class=`${txt.normalize('NFD').replace(/[\u0300-\u036f]/g,"").toLowerCase().split(" ").join("-")}__container l-content`)
+      h2(class=`${txt.normalize('NFD').replace(/[\u0300-\u036f]/g,"").toLowerCase().split(" ").join("-")}__title`)= txt
+      div(class=`${txt.normalize('NFD').replace(/[\u0300-\u036f]/g,"").toLowerCase().split(" ").join("-")}__img`): img(src=`/assets/img/about/${txt.normalize('NFD').replace(/[\u0300-\u036f]/g,"").toLowerCase().split(" ").join("-")}.${url}` alt=txt)
+      p(class=`${txt.normalize('NFD').replace(/[\u0300-\u036f]/g,"").toLowerCase().split(" ").join("-")}__desc`)= eval(txt.normalize('NFD').replace(/[\u0300-\u036f]/g,"").toLowerCase())
+
+mixin productInfo(name)
+  article.product-article
+    section.product-info
+      .product-info__img: img(src=`/assets/img/products/${name.normalize('NFD').replace(/[\u0300-\u036f]/g,"").toLowerCase().split(" ").join("-")}.png` alt=name)
+      h2.product-info__title= name
+      p.product-info__desc#productDesc
+      h3.product-info__subtitle Ingredientes
+      ul.product-ingredients
+        each ingredient in ingredients
+          li.product-ingredients__item= ingredient

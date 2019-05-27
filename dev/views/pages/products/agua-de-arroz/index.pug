@@ -1,0 +1,23 @@
+extends ../../../includes/template
+
+block append config
+  -
+    let ingredients = [
+      '1 taza de arroz',
+      '1 taza y media de agua destilada.'
+    ]
+
+    currentPage = 'Agua de arroz'
+
+block content
+  .l-main-container
+    +productInfo('Agua de arroz')
+
+  script.
+    let productDescc = `Al usar el agua de arroz como tónico facial puedes limpiar tu piel con suavidad. Al mismo tiempo, consigues retirar impurezas como puntos negros, combatir el acné y el exceso de brillo en el rostro. Este tónico es hipoalergénico. Por tanto, ayuda a calmar irritaciones.
+    <br/><br/>El agua de arroz contiene también inositol, el cual ayuda al crecimiento de las células e incita el flujo de la sangre. Esto contribuye a disminuir la apariencia de los poros abiertos y le da mucha más vitalidad a tu rostro.
+    <br/><br/>El tónico facial de agua de arroz también nos ayuda a eliminar las manchas en la piel ocasionadas por el sol y los cambios hormonales. Esto lo logra porque actúa como astringente natural y es rico en niacina (vitamina B3). Este componente tiene un efecto blanqueador en la piel sin presentar efectos secundarios.
+    <br/><br/>Para aquellas personas que sufren de la alteración en la piel conocida como rosácea también puede ser útil. Este tónico es ideal para calmar las irritaciones y suavizar la piel.
+    `
+
+    document.getElementById('productDesc').innerHTML = productDescc

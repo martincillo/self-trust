@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Jabón | Self-Trust</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Encuentra los mejores productos que haran resaltar tu belleza. Confiar en nosotros es confiar en ti.">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+  </head>
+  <body>
+    <header class="header">
+      <div class="l-main-container main-header">
+        <div class="main-header__logo"><a href="/"><img src="/assets/img/logo.png" alt="Logo"></a></div>
+        <nav>
+          <ul class="main-menu" id="mainMenu">
+            <li class="main-menu__item"><a class="main-menu__link" href="/mision-y-vision">Misión y Visión</a></li>
+            <li class="main-menu__item"><a class="main-menu__link" href="/objetivo-y-valores">Objetivo y Valores</a></li>
+          </ul>
+        </nav><i class="fas fa-bars main-header__hamburger-icon" id="hamburgerButton"></i>
+      </div>
+    </header>
+    <main class="main">
+      <div class="l-main-container">
+        <article class="product-article">
+          <section class="product-info">
+            <div class="product-info__img"><img src="/assets/img/products/jabon.png" alt="Jabón"/></div>
+            <h2 class="product-info__title">Jabón</h2>
+            <p class="product-info__desc" id="productDesc"></p>
+            <h3 class="product-info__subtitle">Ingredientes</h3>
+            <ul class="product-ingredients">
+              <li class="product-ingredients__item">1 barra de glicerina</li>
+              <li class="product-ingredients__item">Gotas al gusto de la escencia de su elección</li>
+              <li class="product-ingredients__item">Gotas de colorante vegetal de su elección, de preferencia colores pasteles</li>
+              <li class="product-ingredients__item">Aceite de almendras o coco opcional</li>
+              <li class="product-ingredients__item">Moldes de silicón</li>
+              <li class="product-ingredients__item">Una olla grande</li>
+              <li class="product-ingredients__item">Olla pequeña que quepa dentro de la olla grande para año maría</li>
+              <li class="product-ingredients__item">Rallador de queso</li>
+              <li class="product-ingredients__item">Cuchara de madera de preferencia</li>
+              <li class="product-ingredients__item">Alcohol de tapa azul</li>
+              <li class="product-ingredients__item">Se le pueden agregar rajitas de canela, romero, menta, etc para decorar</li>
+            </ul>
+          </section>
+        </article>
+      </div>
+      <script>
+        let productDescc = `Se ralla la barra de glicerina en la olla pequeña y se pone la olla pequeña dentro de la grande para poder calentar a baño maría, Una vez que este casi derretida la glicerina se le agregan las gotas tanto de aceite como de esencia. Se retira del fuego y ahora si se termina de mezclar hasta que todo quede fundido e incorporado.
+        <br/><br/>Posteriormente se agrega el colorante y se vacía en los moldes los cuales se deben rociar previamente con alcohol para facilitar su desmoldado.
+        <br/><br/>Se dejan enfriar y se refrigeran 30 minutos para su posterior desmoldado.`
+        
+        document.getElementById('productDesc').innerHTML = productDescc
+      </script>
+    </main>
+    <script src="/assets/js/script.js"></script>
+    <footer class="main-footer">
+      <div class="l-main-container main-footer__data">
+        <div class="main-footer__contact">
+          <h2 class="main-footer__title">Contacto</h2>
+          <ul class="main-footer__info">
+            <li class="main-footer__address"><i class="fas fa-map-marker-alt"></i><span>Av. Solidaridad 3, Pri, 33825 Hidalgo del Parral, Chih.</span></li>
+            <li class="main-footer__phone"><i class="fas fa-phone"></i><span>01 627 522 6081</span></li>
+          </ul>
+        </div>
+        <div class="main-footer__logo"><img src="/assets/img/logo.png" alt="Logo"></div>
+      </div>
+    </footer>
+  </body>
+</html>

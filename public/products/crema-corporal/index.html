@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Crema Corporal | Self-Trust</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Encuentra los mejores productos que haran resaltar tu belleza. Confiar en nosotros es confiar en ti.">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+  </head>
+  <body>
+    <header class="header">
+      <div class="l-main-container main-header">
+        <div class="main-header__logo"><a href="/"><img src="/assets/img/logo.png" alt="Logo"></a></div>
+        <nav>
+          <ul class="main-menu" id="mainMenu">
+            <li class="main-menu__item"><a class="main-menu__link" href="/mision-y-vision">Misión y Visión</a></li>
+            <li class="main-menu__item"><a class="main-menu__link" href="/objetivo-y-valores">Objetivo y Valores</a></li>
+          </ul>
+        </nav><i class="fas fa-bars main-header__hamburger-icon" id="hamburgerButton"></i>
+      </div>
+    </header>
+    <main class="main">
+      <div class="l-main-container">
+        <article class="product-article">
+          <section class="product-info">
+            <div class="product-info__img"><img src="/assets/img/products/crema-corporal.png" alt="Crema Corporal"/></div>
+            <h2 class="product-info__title">Crema Corporal</h2>
+            <p class="product-info__desc" id="productDesc"></p>
+            <h3 class="product-info__subtitle">Ingredientes</h3>
+            <ul class="product-ingredients">
+              <li class="product-ingredients__item">125 ml aproximadamente de agua mineral o de manantial</li>
+              <li class="product-ingredients__item">42 ml de aceite de coco</li>
+              <li class="product-ingredients__item">80 ml de aceite de almendras</li>
+              <li class="product-ingredients__item">14-15 gr de cera de abeja o cera blanca</li>
+              <li class="product-ingredients__item">Vitamina E</li>
+              <li class="product-ingredients__item">Colorante vegetal (colores en gel grado alimenticio en tono pastel)</li>
+            </ul>
+          </section>
+        </article>
+      </div>
+      <script>
+        let productDescc = `<strong>Cera de abeja. –</strong> Es uno de los ingredientes de la crema que sirve para reducir    las cicatrices y    que     además actúa como agente hidratante.
+          <br/><br/><strong>Vitamina E. –</strong>  Es un antioxidante que protege el tejido corporal del daño causado por sustancias llamadas radicales libres, que pueden dañar células, tejidos y órganos.
+          <br/><br/><strong>Aceite de almendras. –</strong>  Ayuda a mantener los niveles de hidratación de la piel y se absorbe en un momento, sin bloquear los poros.
+          <br/><br/><strong>Aceite de coco. –</strong>  Por sus propiedades antibióticas es un buen remedio para prevenir el acné y otros problemas en la piel.`
+        
+        document.getElementById('productDesc').innerHTML = productDescc
+      </script>
+    </main>
+    <script src="/assets/js/script.js"></script>
+    <footer class="main-footer">
+      <div class="l-main-container main-footer__data">
+        <div class="main-footer__contact">
+          <h2 class="main-footer__title">Contacto</h2>
+          <ul class="main-footer__info">
+            <li class="main-footer__address"><i class="fas fa-map-marker-alt"></i><span>Av. Solidaridad 3, Pri, 33825 Hidalgo del Parral, Chih.</span></li>
+            <li class="main-footer__phone"><i class="fas fa-phone"></i><span>01 627 522 6081</span></li>
+          </ul>
+        </div>
+        <div class="main-footer__logo"><img src="/assets/img/logo.png" alt="Logo"></div>
+      </div>
+    </footer>
+  </body>
+</html>
